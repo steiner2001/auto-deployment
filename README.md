@@ -76,4 +76,8 @@ While deploying, you can get informations where the process is going. The main s
 ## Re-building
 **IMPORTANT: when you have changes on your existing project you can't use the auto-deploy command, otherwise it will overwrite your files with a new template**
 
-`.bat` file for re-building is under-process.
+If you have changes on your project you want to deploy just run the following command:
+```
+./re-deploy.bat --name {AppName} --resource-group {ResourceGroup}
+```
+Unlike auto-deploy by running this command the application won't open once again. If you closed it previously, you have to navigate to `https://{AppName}.azurewebsites.net`.
