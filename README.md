@@ -62,6 +62,12 @@ ERROR: (AuthorizationFailed) The client '{Your Username}' with object id '{Your 
 "--CREATING-PLAN--"
 ERROR: Please run 'az login' to setup account.
 ```
+#### Your app name has to be uniqe in your region, otherwise the following error occures:
+```
+"--CREATING-WEBAPP--"
+WARNING: Webapp 'asdasd' already exists. The command will use the existing app's settings.
+ERROR: Unable to retrieve details of the existing app 'asdasd'. Please check that the app is a part of the current subscription
+```
 ## Labels
 While deploying, you can get informations where the process is going. The main stages of the deployment are highlighted in the console with upper case and `--`on the two sides of it. Example:
 ```
