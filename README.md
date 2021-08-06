@@ -1,5 +1,5 @@
-# auto-deployment
-In this article you will learn how to use auto-deployment for WebSharper projects via [Azure](https://azure.microsoft.com/en-us/)
+# Auto-Deployment
+In this article you will learn how to use auto-deployment for WebSharper projects via [Azure](https://azure.microsoft.com/en-us/).
 ## Steps:
 #### 1. open CMD from root folder
 #### 2. Log in to Azure ([create an Azure account](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/))
