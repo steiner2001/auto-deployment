@@ -62,6 +62,12 @@ ERROR: (AuthorizationFailed) The client '{Your Username}' with object id '{Your 
 "--CREATING-PLAN--"
 ERROR: Please run 'az login' to setup account.
 ```
+#### Your app name has to be uniqe in your region, otherwise the following error occures:
+```
+"--CREATING-WEBAPP--"
+WARNING: Webapp '{AppName}' already exists. The command will use the existing app's settings.
+ERROR: Unable to retrieve details of the existing app '{AppName}'. Please check that the app is a part of the current subscription
+```
 ## Labels
 While deploying, you can get informations where the process is going. The main stages of the deployment are highlighted in the console with upper case and `--`on the two sides of it. Example:
 ```
@@ -69,4 +75,9 @@ While deploying, you can get informations where the process is going. The main s
 ```
 ## Re-building
 **IMPORTANT: when you have changes on your existing project you can't use the auto-deploy command, otherwise it will overwrite your files with a new template**
-`.bat` file for re-building is under-process.
+
+If you have changes on your project you want to deploy just run the following command:
+```
+./re-deploy.bat --name {AppName} --resource-group {ResourceGroup}
+```
+Unlike auto-deploy by running this command the application won't open once again. If you closed it previously, you have to navigate to `https://{AppName}.azurewebsites.net`.
