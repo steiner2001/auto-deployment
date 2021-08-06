@@ -1,8 +1,8 @@
 # auto-deployment
 In this article you will learn how to use auto-deployment for WebSharper projects via [Azure](https://azure.microsoft.com/en-us/)
 ## Steps:
-### 1. open CMD from root folder
-### 2. Log in to Azure ([create an Azure account](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/))
+#### 1. open CMD from root folder
+#### 2. Log in to Azure ([create an Azure account](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/))
 ```
 az login --username {Username} --password {Password}
 ```
@@ -11,15 +11,15 @@ or
 az login
 ```
 That directs you to the login site.
-### 3. Run the following command
+#### 3. Run the following command
 ```
 ./auto-deploy.bat --name {AppName} --plan {Plan} --resource-group {ResourceGroup} --template {Template} --lang {Language}
 ```
-### 4. Congratulations! You just created your application you can use immediatly in your browser!
+#### 4. Congratulations! You just created your application you can use immediatly in your browser!
 ## Attributes
 
 Attribute | Value
------------------
+----------|------
 AppName | the name of your websharper project and your web application
 Plan | the plan Azure uses for your web application ([what is an azure plan?](https://docs.microsoft.com/en-us/partner-center/azure-plan-get-started))
 ResourceGroup | the resource group Azure uses for your application - **IMPORTANT: you have to use an existing resource group**
@@ -37,7 +37,7 @@ In the second stage the command will create your Azure app and deploy it
 3. the deploying will start
 4. your application will open in your default browser
 ## Special cases
-### If you run the .bat file with the same AppName in the same folder, you will get a short message on your console:
+#### If you run the .bat file with the same AppName in the same folder, you will get a short message on your console:
 ```
 "--CREATING-WS-APP--"
 Creating this template will make changes to existing files:
@@ -51,13 +51,13 @@ Creating this template will make changes to existing files:
   Overwrite   ./wsconfig.json
 ```
 **IMPORTANT: It will overwrite your previous project so make sure you are in the good folder and you use a new appName**
-### If the following error occures you don't have a resource group with the name you used for `--resource-group`:
+#### If the following error occures you don't have a resource group with the name you used for `--resource-group`:
 ```
 "--CREATING-PLAN--"
 ERROR: (AuthorizationFailed) The client '{Your Username}' with object id '{Your Object ID}' does not have authorization to perform action 'Microsoft.Resources/subscriptions/resourcegroups/read' over scope '{Path of the mentioned resource group}' or the scope is invalid. If access was recently granted, please refresh your credentials.
 ```
 **IMPORTANT: If you just get access for the resource group you only need to rerun the command with the same attributes**
-### You have to log in into your Azure account, otherwise you will get the following error:
+#### You have to log in into your Azure account, otherwise you will get the following error:
 ```
 "--CREATING-PLAN--"
 ERROR: Please run 'az login' to setup account.
