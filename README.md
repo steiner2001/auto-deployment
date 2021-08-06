@@ -6,7 +6,7 @@ In this article you will learn how to use auto-deployment for WebSharper project
 ```
 az login --username {Username} --password {Password}
 ```
-or
+or you can just call
 ```
 az login
 ```
@@ -27,15 +27,15 @@ Template | the WebSharper template that generates. It has two types: `web` and `
 Language | The programming language you project will use. There is two available languages: `C#` and `F#`
 
 ## But what does the command do exactly?
-In the first stage the command will prepare your project for deploying
-1. The .bat file will create a folder in your root directory with the name of your application. This folder will contain your project.
-2. The project will build and publish
-3. A zip file will be generated in your project folder - for deploying
-In the second stage the command will create your Azure app and deploy it
-1. firstly your plan will be created. If there is an existing plan with the same name, your application will use that instead of generating a new plan
-2. your web application will be created using the plan and the resource group
-3. the deploying will start
-4. your application will open in your default browser
+* In the first stage the command will prepare your project for deploying
+  1. The .bat file will create a folder in your root directory with the name of your application. This folder will contain your project.
+  2. The project will build and publish
+  3. A zip file will be generated in your project folder - for deploying
+* In the second stage the command will create your Azure app and deploy it
+  1. firstly your plan will be created. If there is an existing plan with the same name, your application will use that instead of generating a new plan
+  2. your web application will be created using the plan and the resource group
+  3. the deploying will start
+  4. your application will open in your default browser
 ## Special cases
 #### If you run the .bat file with the same AppName in the same folder, you will get a short message on your console:
 ```
