@@ -17,6 +17,7 @@ That directs you to the login site.
 ```
 ### 4. Congratulations! You just created your application you can use immediatly in your browser!
 ## Attributes
+
 Attribute | Value
 -----------------
 AppName | the name of your websharper project and your web application
@@ -24,6 +25,7 @@ Plan | the plan Azure uses for your web application ([what is an azure plan?](ht
 ResourceGroup | the resource group Azure uses for your application - **IMPORTANT: you have to use an existing resource group**
 Template | the WebSharper template that generates. It has two types: `web` and `asp`
 Language | The programming language you project will use. There is two available languages: `C#` and `F#`
+
 ## But what does the command do exactly?
 In the first stage the command will prepare your project for deploying
 1. The .bat file will create a folder in your root directory with the name of your application. This folder will contain your project.
