@@ -69,4 +69,5 @@ While deploying, you can get informations where the process is going. The main s
 ```
 ## Re-building
 **IMPORTANT: when you have changes on your existing project you can't use the auto-deploy command, otherwise it will overwrite your files with a new template**
+
 `.bat` file for re-building is under-process.
