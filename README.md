@@ -73,7 +73,7 @@ While deploying, you can get informations where the process is going. The main s
 ```
 --CREATING-WS-APP--
 ```
-## Re-building
+# Re-building
 **IMPORTANT: when you have changes on your existing project you can't use the auto-deploy command, otherwise it will overwrite your files with a new template**
 
 If you have changes on your project you want to deploy just run the following command:
@@ -81,3 +81,24 @@ If you have changes on your project you want to deploy just run the following co
 ./re-deploy.bat --name {AppName} --resource-group {ResourceGroup}
 ```
 Unlike auto-deploy by running this command the application won't open once again. If you closed it previously, you have to navigate to `https://{AppName}.azurewebsites.net`.
+
+## Special cases
+
+If you get the following error in publishing phase:
+```
+stdin(0,1): error FS0078: Unable to find the file '../zip.fsx' in any of
+ C:\{...}\auto-deployment
+```
+Or the following in deploying phase:
+```
+ERROR: Either 'archive.zip' is not a valid local file path or you do not have permissions to access it
+```
+This errors indicate that you are in a wrong folder or you don't have a ws project with the given name. In this case check out your working directory and make sure you give the correct value to `--name`.
+
+If you removed your app/plan from your resource-group after created a project with `./auto-deploy.bat` the terminal will throw the next error while deploying:
+```
+ERROR: (ResourceNotFound) The Resource 'Microsoft.Web/sites/{AppName}' under resource group '{ResourceGroup}' was not found. For more details please go to https://aka.ms/ARMResourceNotFoundFix
+```
+# 
+
+### Still have issues? [Contact me!](https://github.com/steiner2001/auto-deployment/issues)
