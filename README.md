@@ -1,6 +1,8 @@
 # Auto-Deployment
 In this article you will learn how to use auto-deployment for WebSharper projects via [Azure](https://azure.microsoft.com/en-us/).
 ## Steps:
+#### 0. Get WebSharper!
+For this, all what you have to do is just running `dotnet new -i WebSharper.Templates`
 #### 1. open CMD from root folder
 #### 2. Log in to Azure ([create an Azure account](https://docs.microsoft.com/en-us/learn/modules/create-an-azure-account/))
 ```
