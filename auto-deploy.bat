@@ -28,4 +28,4 @@ ECHO --BUILDING-- && dotnet build
 ECHO --PUBLISHING-- && dotnet publish
 dotnet fsi ../zip.fsx bin/Debug/net5.0/publish
 
-ECHO --CREATING-PLAN-- && az appservice plan create -g %resourceGroup% -n %plan% && ECHO "--CREATING-WEBAPP--" && az webapp create -g %resourceGroup% -p %plan% -n %appName% && ECHO "--DEPLOYING--" && az webapp deploy -g %resourceGroup% -n %appName% --src-path archive.zip --type zip && start https://%appName%.azurewebsites.net
+ECHO --CREATING-PLAN-- && az appservice plan create -g %resourceGroup% -n %plan% && ECHO --CREATING-WEBAPP-- && az webapp create -g %resourceGroup% -p %plan% -n %appName% && ECHO --DEPLOYING-- && az webapp deploy -g %resourceGroup% -n %appName% --src-path archive.zip --type zip && start https://%appName%.azurewebsites.net
