@@ -14,8 +14,8 @@ if not "%1"=="" (
 )
 
 cd %appName%
-ECHO "--BUILDING--" && dotnet build
-ECHO "--PUBLISHING--" && dotnet publish
+ECHO --BUILDING-- && dotnet build
+ECHO --PUBLISHING-- && dotnet publish
 dotnet fsi ../zip.fsx bin/Debug/net5.0/publish
 
-ECHO "--DEPLOYING--" && az webapp deploy -g %resourceGroup% -n %appName% --src-path archive.zip --type zip
+ECHO --DEPLOYING-- && az webapp deploy -g %resourceGroup% -n %appName% --src-path archive.zip --type zip

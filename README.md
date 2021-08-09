@@ -39,7 +39,7 @@ Language | The programming language you project will use. There is two available
 ## Special cases
 #### If you run the .bat file with the same AppName in the same folder, you will get a short message on your console:
 ```
-"--CREATING-WS-APP--"
+--CREATING-WS-APP--
 Creating this template will make changes to existing files:
   Overwrite   ./appsettings.json
   Overwrite   ./Client.fs
@@ -53,13 +53,13 @@ Creating this template will make changes to existing files:
 **IMPORTANT: It will overwrite your previous project so make sure you are in the good folder and you use a new appName**
 #### If the following error occures you don't have a resource group with the name you used for `--resource-group`:
 ```
-"--CREATING-PLAN--"
+--CREATING-PLAN--
 ERROR: (AuthorizationFailed) The client '{Your Username}' with object id '{Your Object ID}' does not have authorization to perform action 'Microsoft.Resources/subscriptions/resourcegroups/read' over scope '{Path of the mentioned resource group}' or the scope is invalid. If access was recently granted, please refresh your credentials.
 ```
 **IMPORTANT: If you just get access for the resource group you only need to rerun the command with the same attributes**
 #### You have to log in into your Azure account, otherwise you will get the following error:
 ```
-"--CREATING-PLAN--"
+--CREATING-PLAN--
 ERROR: Please run 'az login' to setup account.
 ```
 #### Your app name has to be uniqe in your region, otherwise the following error occures:
